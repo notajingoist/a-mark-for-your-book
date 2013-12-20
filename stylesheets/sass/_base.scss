@@ -1,0 +1,39 @@
+/* @group general styling */
+	* {
+		@include box-sizing(border-box);
+		-webkit-appearance: none;
+	}
+
+	body {
+		background-color: $green;
+		// background-image: image-url('');
+		// background-repeat: repeat;
+		font-family: Cardo, serif;
+	}
+
+	p {
+		line-height: 1.2;
+	}
+
+	::selection {
+		background: $ochre;
+	}
+
+	::-moz-selection {
+		background: $ochre;
+	}
+/* @end */
+
+
+/* @group additional styling */
+	.hide {
+		display: none;
+	}
+
+	.hide-text {
+		display: block;
+		overflow: hidden;
+		text-indent: 100%;
+		white-space: nowrap;
+	}
+/* @end */
