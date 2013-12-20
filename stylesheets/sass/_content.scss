@@ -112,8 +112,14 @@
 		ul {
 			li {
 				display: inline-block;
-				padding-right: 25px;
+				&:not(:last-child) {
+					padding-right: 25px;
+				}
 			}
+		}
+
+		@include respond-to($mobile) {
+			font-size: 12px;
 		}
 	}
 /* @end */

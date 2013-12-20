@@ -305,7 +305,16 @@ nav {
 /* line 113, ../sass/_content.scss */
 nav ul li {
   display: inline-block;
+}
+/* line 115, ../sass/_content.scss */
+nav ul li:not(:last-child) {
   padding-right: 25px;
+}
+@media only screen and (max-width: 720px) {
+  /* line 108, ../sass/_content.scss */
+  nav {
+    font-size: 12px;
+  }
 }
 
 /* @end */
