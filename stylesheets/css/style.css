@@ -66,9 +66,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* setup */
 /* colors */
-/* dimensions */
 /* breakpoints */
 /* @group miscellaneous placeholders */
+/* line 2, ../sass/_placeholders.scss */
+.wrapper {
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  right: 0;
+}
+
 /* @end */
 /* @group various mixins */
 /* stole this from one of the Viget Labs repos */
@@ -89,33 +97,54 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 7, ../sass/_base.scss */
 body {
-  background-color: #558c74;
-  font-family: Cardo, serif;
+  background-color: white;
+  font-family: "IM Fell English", Cardo, serif;
 }
 
-/* line 14, ../sass/_base.scss */
-p {
-  line-height: 1.2;
-}
-
-/* line 18, ../sass/_base.scss */
+/* line 15, ../sass/_base.scss */
 ::selection {
-  background: #e6c47c;
+  background: #d1d128;
 }
 
-/* line 22, ../sass/_base.scss */
+/* line 19, ../sass/_base.scss */
 ::-moz-selection {
-  background: #e6c47c;
+  background: #d1d128;
+}
+
+/* line 23, ../sass/_base.scss */
+a {
+  color: #cc3d0a;
+  display: inline-block;
+  line-height: 1;
+  text-decoration: none;
+}
+/* line 29, ../sass/_base.scss */
+a:hover {
+  border-bottom: 1px dashed #cccccc;
+  color: #cccccc;
+}
+/* line 34, ../sass/_base.scss */
+a.img-link {
+  display: block;
+}
+/* line 37, ../sass/_base.scss */
+a.img-link:hover {
+  border: none;
+}
+
+/* line 43, ../sass/_base.scss */
+p {
+  line-height: 1.3;
 }
 
 /* @end */
 /* @group additional styling */
-/* line 29, ../sass/_base.scss */
+/* line 52, ../sass/_base.scss */
 .hide {
   display: none;
 }
 
-/* line 33, ../sass/_base.scss */
+/* line 56, ../sass/_base.scss */
 .hide-text {
   display: block;
   overflow: hidden;
@@ -123,14 +152,160 @@ p {
   white-space: nowrap;
 }
 
-/* @end */
-/* @group wrapper */
-/* line 2, ../sass/_grid.scss */
-.wrapper {
-  width: 100%;
+/* line 65, ../sass/_base.scss */
+.clear-after:before, .clear-after:after {
+  content: '';
+  display: table;
+}
+/* line 70, ../sass/_base.scss */
+.clear-after:after {
+  clear: both;
+}
+
+/* line 75, ../sass/_base.scss */
+.clear {
+  clear: both;
+}
+
+/* line 79, ../sass/_base.scss */
+.em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* line 84, ../sass/_base.scss */
+.highlight {
+  color: #cc3d0a;
+}
+
+/* line 88, ../sass/_base.scss */
+.caps {
+  text-transform: uppercase;
 }
 
 /* @end */
+/* @group wrapper */
+/* @end */
 /* content */
 /* @group wrapper */
+/* line 2, ../sass/_content.scss */
+.wrapper {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  font-size: 22px;
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 25px;
+  width: 90%;
+}
+/* line 16, ../sass/_content.scss */
+.wrapper h1 {
+  font-size: 54px;
+  margin-bottom: 25px;
+}
+/* line 21, ../sass/_content.scss */
+.wrapper p {
+  text-align: justify;
+}
+/* line 24, ../sass/_content.scss */
+.wrapper p.footnote {
+  font-size: 16px;
+  margin-top: 15px;
+}
+/* line 31, ../sass/_content.scss */
+.wrapper ul.qa li {
+  margin-bottom: 40px;
+}
+/* line 34, ../sass/_content.scss */
+.wrapper ul.qa li p {
+  margin-bottom: 5px;
+  text-align: left;
+}
+/* line 40, ../sass/_content.scss */
+.wrapper ul.qa li .q,
+.wrapper ul.qa li .a {
+  padding-right: 25px;
+}
+/* line 44, ../sass/_content.scss */
+.wrapper ul.qa li .q {
+  color: #cc3d0a;
+}
+/* line 48, ../sass/_content.scss */
+.wrapper ul.qa li .a {
+  color: #cccccc;
+}
+@media only screen and (max-width: 720px) {
+  /* line 31, ../sass/_content.scss */
+  .wrapper ul.qa li {
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (max-width: 720px) {
+  /* line 2, ../sass/_content.scss */
+  .wrapper {
+    font-size: 16px;
+  }
+  /* line 61, ../sass/_content.scss */
+  .wrapper h1 {
+    font-size: 32px;
+  }
+  /* line 66, ../sass/_content.scss */
+  .wrapper p.footnote {
+    font-size: 12px;
+  }
+}
+
+/* @end */
+/* @group thumbs */
+/* line 75, ../sass/_content.scss */
+.thumbs {
+  margin-top: 25px;
+}
+/* line 77, ../sass/_content.scss */
+.thumbs .tn {
+  -webkit-transition: all 0.2s ease-in-out;
+  -webkit-transition-delay: 0;
+  -moz-transition: all 0.2s ease-in-out 0;
+  -o-transition: all 0.2s ease-in-out 0;
+  transition: all 0.2s ease-in-out 0;
+  border: 1px dashed #cccccc;
+  display: block;
+  float: left;
+  margin-bottom: 25px;
+  opacity: 1;
+  padding: 3px;
+  width: 30%;
+}
+/* line 87, ../sass/_content.scss */
+.thumbs .tn img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* line 93, ../sass/_content.scss */
+.thumbs .tn.col-2 {
+  margin-left: 4.5%;
+  margin-right: 4.5%;
+}
+/* line 98, ../sass/_content.scss */
+.thumbs .tn:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+/* @end */
+/* @group footer */
+/* line 108, ../sass/_content.scss */
+nav {
+  font-size: 16px;
+  margin-top: 25px;
+}
+/* line 113, ../sass/_content.scss */
+nav ul li {
+  display: inline-block;
+  padding-right: 25px;
+}
+
 /* @end */

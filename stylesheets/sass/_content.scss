@@ -1,5 +1,119 @@
 /* @group wrapper */
 	.wrapper {
+		@extend %center-element-horiz;
+		@include box-sizing(border-box);
+		// background: rgba(255, 255, 255, .2);
+		// padding: 25px 50px;
+		// width: 100%;
+		// border: 1px dashed $black;
+		display: block;
+		font-size: 22px;
+		margin: 0 auto;
+		max-width: 900px;
+		padding: 25px;
+		width: 90%;
+		
+		h1 {
+			font-size: 54px;
+			margin-bottom: 25px;
+		}
 
+		p {
+			text-align: justify;
+
+			&.footnote {
+				font-size: 16px;
+				margin-top: 15px;
+			}
+		}
+
+		ul.qa {
+			li {
+				margin-bottom: 40px;
+
+				p {
+					margin-bottom: 5px;
+					text-align: left;
+				}
+
+				.q,
+				.a {
+					padding-right: 25px;
+				}
+
+				.q {
+					color: $persimmon;
+				}
+
+				.a {
+					color: $grey;
+				}
+
+				@include respond-to($mobile) {
+					margin-bottom: 30px;
+				}
+			}
+		}
+
+		@include respond-to($mobile) {
+			font-size: 16px;
+
+			h1 {
+				font-size: 32px;
+			}
+
+			p {
+				&.footnote {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+/* @end */
+
+/* @group thumbs */
+	.thumbs {
+		margin-top: 25px;
+		.tn {
+			@include transition(all 0.2s ease-in-out 0);
+			border: 1px dashed $grey;
+			display: block;
+			float: left;
+			margin-bottom: 25px;
+			opacity: 1;
+			padding: 3px;
+			width: 30%;
+
+			img {
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+
+			&.col-2 {
+				margin-left: 4.5%;
+				margin-right: 4.5%;
+			}
+
+			&:hover {
+				cursor: pointer;
+				opacity: 0.5;
+			}
+		}
+	}
+/* @end */
+
+
+/* @group footer */
+	nav {
+		font-size: 16px;
+		margin-top: 25px;
+		
+		ul {
+			li {
+				display: inline-block;
+				padding-right: 25px;
+			}
+		}
 	}
 /* @end */

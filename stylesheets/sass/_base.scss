@@ -5,23 +5,46 @@
 	}
 
 	body {
-		background-color: $green;
-		// background-image: image-url('');
-		// background-repeat: repeat;
-		font-family: Cardo, serif;
-	}
-
-	p {
-		line-height: 1.2;
+		// @include background-size(cover);
+		// background-image: image-url('rain.jpg');
+		// background-repeat: no-repeat;
+		background-color: $white;
+		font-family: "IM Fell English", Cardo, serif;
 	}
 
 	::selection {
-		background: $ochre;
+		background: $chartreuse;
 	}
 
 	::-moz-selection {
-		background: $ochre;
+		background: $chartreuse;
 	}
+
+	a {
+		color: $persimmon;
+		display: inline-block; 
+		line-height: 1;
+		text-decoration: none;
+
+		&:hover {
+			border-bottom: 1px dashed $grey;
+			color: $grey;
+		}
+
+		&.img-link {
+			display: block;
+
+			&:hover {
+				border: none;
+			}
+		}
+	}
+
+	p {
+		line-height: 1.3;
+	}
+
+
 /* @end */
 
 
@@ -36,4 +59,50 @@
 		text-indent: 100%;
 		white-space: nowrap;
 	}
+
+	.clear-after {
+		&:before,
+		&:after {
+			content: '';
+			display: table;
+		}
+
+		&:after {
+			clear: both;
+		}
+	}
+
+	.clear {
+		clear: both;
+	}
+
+	.em {
+		font-style: italic;
+		font-weight: 400;
+	}
+
+	.highlight {
+		color: $persimmon;
+	}
+
+	.caps {
+		text-transform: uppercase;
+	}
+	
+	// img.bg {
+	// 	min-height: 100%;
+	// 	min-width: 1024px;
+
+	// 	width: 100%;
+	// 	height: auto;
+
+	// 	position: fixed;
+	// 	top: 0;
+	// 	left: 0;
+		
+	// 	@include respond-to($bg) {
+	// 		left: 50%;
+	// 		margin-left: -512px;
+	// 	}
+	// }
 /* @end */
