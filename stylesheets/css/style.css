@@ -289,29 +289,29 @@ p {
   margin-left: 4.5%;
   margin-right: 4.5%;
 }
-/* line 98, ../sass/_content.scss */
-.thumbs .tn:hover {
+/* line 99, ../sass/_content.scss */
+.thumbs .tn.tn-clickable:hover {
   cursor: pointer;
   opacity: 0.5;
 }
 
 /* @end */
 /* @group footer */
-/* line 108, ../sass/_content.scss */
+/* line 110, ../sass/_content.scss */
 nav {
   font-size: 16px;
   margin-top: 25px;
 }
-/* line 113, ../sass/_content.scss */
+/* line 115, ../sass/_content.scss */
 nav ul li {
   display: inline-block;
 }
-/* line 115, ../sass/_content.scss */
+/* line 117, ../sass/_content.scss */
 nav ul li:not(:last-child) {
   padding-right: 25px;
 }
 @media only screen and (max-width: 720px) {
-  /* line 108, ../sass/_content.scss */
+  /* line 110, ../sass/_content.scss */
   nav {
     font-size: 12px;
   }

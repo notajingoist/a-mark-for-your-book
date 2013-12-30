@@ -95,9 +95,11 @@
 				margin-right: 4.5%;
 			}
 
-			&:hover {
-				cursor: pointer;
-				opacity: 0.5;
+			&.tn-clickable {
+				&:hover {
+					cursor: pointer;
+					opacity: 0.5;
+				}
 			}
 		}
 	}
